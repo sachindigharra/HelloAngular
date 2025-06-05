@@ -60,7 +60,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 
 ## File Structure & Usage
-my-angular-app/
+#my-angular-app/
 ├── src/
 │   |ー├── app/
 │   │   ├── app.component.ts       # Root component logic
