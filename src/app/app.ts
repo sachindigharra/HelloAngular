@@ -9,4 +9,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = 'AngularBasic-app';
+    inputType: string | undefined="text";
+    value:string='Hello Angular Property Binding'
 }
