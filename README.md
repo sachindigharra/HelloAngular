@@ -79,3 +79,10 @@ For more information on using the Angular CLI, including detailed command refere
 ├── package.json                  # Dependencies and scripts
 ├── tsconfig.json                 # TypeScript configuration
 └── .gitignore                    # Git ignore file
+
+## Data Binding 
+ it concept of sharing the Display Data from Logic computing file (.ts) to user Interface file(.html) and vice versa
+## there are two type of Data binding
+ 1. One Way Data binding
+    Either display data move from .ts to .html and vice versa
+    1. Interpolation
