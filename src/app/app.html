@@ -12,3 +12,14 @@
 <h2>Using ngModel </h2>
 <input type="text" [(ngModel)]="courseName">
 
+<h2>ngModel with Option Input</h2>
+<label for="#state">Select Your state</label>
+<select name="state" id="#state" >
+    <option value="UttarPradesh">UttarPradesh</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Bengaluru">Bengaluru</option>
+    <option value="Hyderabad">Hyderabad</option>
+     <option value="other">other</option>
+</select>
+<input type="checkbox" [(ngModel)]="isIndian">
+{{isIndian}}

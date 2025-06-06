@@ -11,6 +11,8 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected title = 'AngularBasic-app';
   courseName:String="B. tech Cse";
+  stateName:String="Bihar";
+  isIndian:boolean=false;
  changeCourseName(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.courseName = input.value;
