@@ -1,0 +1,70 @@
+<div class="row text-center">
+    <!-- Section 1 -->
+    <div class="col-md-3">
+      <div *ngIf="isDiv1Visible" class="section-box div-1 ">Div-1</div>
+      <button class="btn btn-danger me-2" (click)="hideDiv1()">Hide</button>
+      <button class="btn btn-primary" (click)="showDiv1()">Show</button>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="col-md-3">
+      <div class="section-box div-2" *ngIf="isDiv2Visible">Div-2</div>
+      <button (click)="togleDiv2()" class="btn btn-success">Toggle</button>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="col-md-3">
+      <div class="section-box div-3" *ngIf="num1==num2">Div-3</div>
+      <input type="text" class="form-control d-inline-block w-45 me-2" placeholder="Num-1" [(ngModel)]="num1">
+      <input type="text" class="form-control d-inline-block w-45" placeholder="Num-2" [(ngModel)]="num2">
+    </div>
+
+    <!-- Section 4 -->
+    <div class="col-md-3">
+      <div *ngIf="isSelectedState =='DL'" class="section-box div-4">Div-4</div>
+      <input type="checkbox" class="form-check-input me-2" [(ngModel)]="isActive">
+      <select class="form-select d-inline-block w-auto" [(ngModel)]="isSelectedState">
+        <option selected>Select State</option>
+        <option value="MH">Maharashtra</option>
+        <option value="DL">Delhi</option>
+        <option value="KA">Karnataka</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <li *ngFor="let city of cityArray">{{city}}</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <label for="#state">Select State</label>
+      <br>
+      <select name="statList" id="#state">
+        <option value="{{city}}"  *ngFor="let city of cityArray">{{city}}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr>
+            <th>Sr</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>IsActive</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Student of studentList; let sr=index" >
+            <td>{{sr}}</td>
+            <td>{{Student.name}}</td>
+            <td>{{Student.city}}</td>
+            <td>
+              <span *ngIf="Student.isActive" >Active</span>
+              <span *ngIf="!Student.isActive" >DeActive</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+
+  </div>
