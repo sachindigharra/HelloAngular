@@ -1,0 +1,14 @@
+<p>get-api works!</p>
+<div class="row">
+    <div class="col-3 ">
+        <button class="btn btn-success" (click)="getAllPost()">Get Users</button>
+    </div>
+    <div class="col-3">
+            <h3>User Name Api</h3>
+        @for (user of userList; track $index) {
+            <li class="text-danger">{{user.name}}</li>
+            
+        }
+    </div>
+ 
+</div>

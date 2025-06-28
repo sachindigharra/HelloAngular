@@ -1,0 +1,66 @@
+<div class="row pt-2">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                Department List
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sr No</th>
+                                   
+                                    <th>title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (item of postList; track $index) {
+                                  
+                                    <tr>
+                                        <td>{{item.id}}</td>
+                                        <td>{{item.title}}</td>
+                                    </tr>
+                                }
+                               
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                New Department
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Post title</label>
+                        <input type="text" [(ngModel)]="postObj.title" class="form-control"
+                            placeholder="Enter Name">
+                    </div>
+                    <div class="col-12">
+                        <label for="">post content</label>
+                        <input type="text" [(ngModel)]="postObj.body"  class="form-control"
+                            placeholder="Enter Logo Url">
+                    </div>
+                   
+                </div>
+                <div class="row pt-3">
+                    <div class="col-6 text-center">
+                        <button class="btn btn-secondary">Reset</button>
+                    </div>
+                    <div class="col-6 text-center"> 
+                        <button class="btn btn-success" (click)="onSave()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
