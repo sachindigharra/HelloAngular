@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehicle } from '../service/vehicle';
+import { Alert } from '../reusable/alert/alert';
+import { MyButton } from '../reusable/my-button/my-button';
 
 @Component({
   selector: 'app-data',
-  imports: [],
+  imports: [Alert,MyButton],
   templateUrl: './data.html',
   styleUrl: './data.css'
 })
@@ -19,6 +21,10 @@ export class Data implements OnInit{
       console.log(this.userList)
       debugger;
     })
+  }
+  onDelete(){
+    debugger;
+    alert('Someone Try to change the data')
   }
 
 }

@@ -1,4 +1,5 @@
 <div class="bg-secondary w-100 h-50 rounded-lg p-3   text-center banner" >Service</div>
+<app-alert [message]="'Input & Output Concept'" [alertType]="'success'"></app-alert>
 <table class="table">
   <thead>
     <tr>
@@ -6,6 +7,7 @@
       <th scope="col">Name</th>
       <th scope="col">Username</th>
       <th scope="col">Email</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +17,8 @@
            <td>{{item.name}}</td>
            <td>{{item.username}}</td>
            <td>{{item.email}}</td>
+           <app-my-button [btnText]="'Edit'" [btnType]="'primary'"> </app-my-button>
+           <app-my-button [btnText]="'Update'" [btnType]="'warning'" (onBtnClick)="onDelete()"></app-my-button>
         </tr>
     }
   </tbody>
